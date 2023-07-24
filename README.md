@@ -5,7 +5,7 @@ This platform allows users to input text in one language and receive accurate tr
 
 Steps To Run The code:
 1. Clone the git repo
-2. In the index.html file put in your API Key which can be found at https://platform.openai.com/account/api-keys
+2. In the app.py file put in your API Key which can be found at https://platform.openai.com/account/api-keys
 3. Then run the app.py file using the command python app.py command
 4. Click on the hosted website and your ready to go
    
