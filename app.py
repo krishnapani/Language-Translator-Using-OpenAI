@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
+
 import openai
+
 app = Flask(__name__)
 
-openai.api_key = "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"
+openai.api_key = "" #enter your apikey here
 
 
 def translate_text(input_language, text, target_language):
@@ -28,7 +30,10 @@ def index():
 
         translated_text = translate_text(input_language, text, target_language)
 
-    return render_template("index.html", translated_text=translated_text)
+    with open("index.html", "r") as file:
+        html_content = file.read()
+
+    return html_content.replace("{{ translated_text }}", translated_text)
 
 
 if __name__ == "__main__":
